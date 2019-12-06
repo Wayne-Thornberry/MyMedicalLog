@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MyMedicalLog</string>
+    <string name="recording_reset_text">Reset Recording</string>
+    <string name="recording_translated_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis
+        ultricies mauris. Praesent facilisis diam sed tellus dignissim, sit amet eleifend magna imperdiet. Aliquam ac
+        sodales dui, eget placerat diam. Vestibulum diam ligula, iaculis in sagittis sit amet, blandit eu odio. Maecenas
+        malesuada nisi eget neque egestas placerat.
+    </string>
+    <string name="recording_enter_voice_text">Can\'t Voice?</string>
+    <string name="recording_translation_progress_text">Translation in progress…</string>
+    <string name="recording_view_log_text">View Profile</string>
+</resources>
