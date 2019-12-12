@@ -1,4 +1,4 @@
-package com.example.mymedicallog.lists;
+package com.mymedicallog.core.lists;
 
 import android.view.ViewGroup;
 import android.widget.TextView;

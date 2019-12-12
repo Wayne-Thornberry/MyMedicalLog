@@ -1,0 +1,146 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+        <ImageView android:layout_width="match_parent" android:layout_height="wrap_content"
+                   android:src="@color/design_default_color_primary"
+                   app:srcCompat="@drawable/ic_launcher_background"/>
+        <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+                   android:src="@color/design_default_color_primary_dark"
+                   app:srcCompat="@drawable/ic_launcher_background"
+                   android:background="@color/design_default_color_primary_dark"/>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@color/colorAccent">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:textSize="20sp"
+                          android:text="Recorded Date" android:paddingLeft="10dp" android:paddingRight="10dp"
+                          android:paddingTop="5dp" android:paddingBottom="5dp" android:textAlignment="viewStart"
+                          android:fontFamily="sans-serif-black"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:textSize="20sp"
+                          android:text="Est Start Date" android:paddingLeft="10dp" android:paddingRight="10dp"
+                          android:paddingTop="5dp" android:paddingBottom="5dp" android:textAlignment="viewStart"
+                          android:fontFamily="sans-serif-black"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:textSize="20sp"
+                          android:text="Pain Duration" android:id="@+id/textView8" android:paddingLeft="10dp"
+                          android:paddingRight="10dp" android:paddingTop="5dp" android:paddingBottom="5dp"
+                          android:textAlignment="viewStart" android:fontFamily="sans-serif-black"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:textSize="20sp"
+                          android:text="Pain Severity" android:id="@+id/textView9" android:paddingLeft="10dp"
+                          android:paddingRight="10dp" android:paddingTop="5dp" android:paddingBottom="5dp"
+                          android:textAlignment="viewStart" android:fontFamily="sans-serif-black"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:textSize="20sp"
+                          android:text="Pain Type" android:id="@+id/textView12" android:paddingLeft="10dp"
+                          android:paddingRight="10dp" android:paddingTop="5dp" android:paddingBottom="5dp"
+                          android:textAlignment="viewStart" android:fontFamily="sans-serif-black"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:textSize="20sp"
+                          android:text="Pain Location" android:id="@+id/textView13" android:paddingLeft="10dp"
+                          android:paddingRight="10dp" android:paddingTop="5dp" android:paddingBottom="5dp"
+                          android:textAlignment="viewStart" android:fontFamily="sans-serif-black"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:textSize="20sp"
+                          android:text="Pain Experience" android:id="@+id/textView14" android:paddingLeft="10dp"
+                          android:paddingRight="10dp" android:paddingTop="5dp" android:paddingBottom="5dp"
+                          android:textAlignment="viewStart" android:fontFamily="sans-serif-black"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:textSize="20sp"
+                          android:text="Full Description" android:id="@+id/textView17" android:paddingLeft="10dp"
+                          android:paddingRight="10dp" android:paddingTop="5dp" android:paddingBottom="5dp"
+                          android:textAlignment="viewStart" android:fontFamily="sans-serif-black"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:textSize="20sp"
+                          android:text="Medication Used" android:id="@+id/textView18" android:paddingLeft="10dp"
+                          android:paddingRight="10dp" android:paddingTop="5dp" android:paddingBottom="5dp"
+                          android:textAlignment="viewStart" android:fontFamily="sans-serif-black"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                          android:orientation="vertical">
+                <EditText android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:textSize="20sp"
+                          android:text="03/12/2019" android:paddingBottom="5dp"
+                          android:id="@+id/recordDateET"
+                          android:paddingLeft="5dp" android:paddingTop="5dp" android:paddingRight="5dp"
+                           />
+                <EditText android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:textSize="20sp"
+                          android:text="--/--/--" android:paddingBottom="5dp"
+                          android:id="@+id/estStartDateET"
+                          android:paddingLeft="5dp" android:paddingTop="5dp" android:paddingRight="5dp"
+                           />
+                <EditText android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:textSize="20sp"
+                          android:text="3 Days" android:paddingBottom="5dp"
+                          android:id="@+id/durationET"
+                          android:paddingLeft="5dp" android:paddingTop="5dp" android:paddingRight="5dp"
+                />
+                <EditText android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:textSize="20sp"
+                          android:text="8" android:paddingBottom="5dp"
+                          android:id="@+id/severityET"
+                          android:paddingLeft="5dp" android:paddingTop="5dp" android:paddingRight="5dp"
+                />
+                <EditText android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:textSize="20sp"
+                          android:text="Sharp" android:paddingBottom="5dp"
+                          android:id="@+id/typeET"
+                          android:paddingLeft="5dp" android:paddingTop="5dp" android:paddingRight="5dp"
+                />
+                <EditText android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:textSize="20sp"
+                          android:text="Head Both Temples" android:paddingBottom="5dp"
+                          android:id="@+id/locationET"
+                          android:paddingLeft="5dp" android:paddingTop="5dp" android:paddingRight="5dp"
+                />
+                <EditText android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:textSize="20sp"
+                          android:text="Disabling" android:paddingBottom="5dp"
+                          android:id="@+id/experienceET"
+                          android:paddingLeft="5dp" android:paddingTop="5dp" android:paddingRight="5dp"
+                />
+                <EditText android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:textSize="20sp"
+                          android:text="" android:paddingBottom="5dp"
+                          android:id="@+id/fullDescET"
+                          android:paddingLeft="5dp" android:paddingTop="5dp" android:paddingRight="5dp"
+                />
+                <EditText android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:textSize="20sp"
+                          android:text="Paracetamol" android:paddingBottom="5dp"
+                          android:id="@+id/medicationUsedET"
+                          android:paddingLeft="5dp" android:paddingTop="5dp" android:paddingRight="5dp"
+                />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

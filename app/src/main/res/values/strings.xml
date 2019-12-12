@@ -1,12 +1,23 @@
 <resources>
-    <string name="app_name">MyMedicalLog</string>
-    <string name="recording_reset_text">Reset Recording</string>
-    <string name="recording_translated_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis
-        ultricies mauris. Praesent facilisis diam sed tellus dignissim, sit amet eleifend magna imperdiet. Aliquam ac
-        sodales dui, eget placerat diam. Vestibulum diam ligula, iaculis in sagittis sit amet, blandit eu odio. Maecenas
-        malesuada nisi eget neque egestas placerat.
+    <string name="app_name">My Medical Log</string>
+    <string name="recording_translated_text">Your translated voice will show up here in text form! Don\'t worry about it
+        looking too inaccurate, we\'ll pull the information
+        that is necessary and ask if that\'s OK with you.
     </string>
+    <string name="recording_continue_btn_text">Continue</string>
     <string name="recording_enter_voice_text">Can\'t Voice?</string>
-    <string name="recording_translation_progress_text">Translation in progress…</string>
     <string name="recording_view_log_text">View Profile</string>
+    <string name="recording_translation_progress_text">Press ^ To Start Describing Your Issue</string>
+    <string name="recording_translation_progress_text_2">Press ^ To Rerecord again!</string>
+    <string name="viewSettingsText">Settings</string>
+    <string name="switchToListText">Switch To List</string>
+    <string name="switchToDisplayText">Switch To Display</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="viewProfileText">View Profile</string>
+    <string name="viewLogText">View Log</string>
+    <string name="switchToText">Switch To Text</string>
+    <string name="switchToVoice">Switch To Voice</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

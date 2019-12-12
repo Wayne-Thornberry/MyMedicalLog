@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,51 +6,7 @@
         android:id="@+id/PLAY_PARENT"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".RecordingActivity">
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/viewLogSection">
-        <ImageButton
-                android:layout_width="80dp"
-                android:layout_gravity="center"
-                android:layout_height="80dp"
-                tools:src="@tools:sample/avatars"
-                android:id="@+id/imageButton4"
-                android:onClick="showProfile"
-                android:contentDescription="TODO"/>
-        <TextView
-                android:text="@string/recording_view_log_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView4"
-                android:textAlignment="center"/>
-    </LinearLayout>
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:id="@+id/enterTextSection">
-        <ImageButton
-                android:layout_width="80dp"
-                android:layout_gravity="center"
-                android:layout_height="80dp"
-                android:onClick="showLog"
-                tools:src="@tools:sample/avatars"
-                android:id="@+id/imageButton"
-                android:contentDescription="TODO"/>
-        <TextView
-                android:text="@string/recording_enter_voice_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView3"
-                android:textAlignment="textEnd"/>
-    </LinearLayout>
+        tools:context=".activities.GatheringActivity">
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
@@ -62,12 +18,12 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/informationSection">
         <ImageButton
-                android:layout_width="match_parent"
+                android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:id="@+id/imageButton2"
-                android:onClick="controlRecording"
-                tools:src="@tools:sample/backgrounds/scenic"
+                android:onClick="startSpeechTranslation"
+                tools:src="@android:drawable/ic_btn_speak_now"
                 android:contentDescription="TODO"/>
         <TextView
                 android:layout_width="wrap_content"
@@ -88,9 +44,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
         <Button
-                android:text="@string/recording_reset_text"
+                android:text="@string/recording_continue_btn_text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/button"/>
+                android:layout_height="wrap_content" android:id="@+id/continueBtn"
+                android:visibility="gone"/>
         <TextView
                 android:text="@string/recording_translated_text"
                 android:layout_width="wrap_content"

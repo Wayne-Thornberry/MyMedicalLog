@@ -1,4 +1,4 @@
-package com.example.mymedicallog;
+package com.mymedicallog.core;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;
