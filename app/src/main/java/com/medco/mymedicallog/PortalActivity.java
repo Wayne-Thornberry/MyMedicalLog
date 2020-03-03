@@ -55,7 +55,7 @@ public class PortalActivity extends AppCompatActivity implements OnPortalListFra
     }
 
     public void startCreationActivity(View view) {
-        Intent intent = new Intent(this, ProfileCreationActivity.class);
+        Intent intent = new Intent(this, CreationProfileActivity.class);
         startActivityForResult(intent, 222);
     }
 }

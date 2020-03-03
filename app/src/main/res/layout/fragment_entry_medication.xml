@@ -4,7 +4,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
-              tools:context=".ui.entry.pain.EntryPainFragment">
+              tools:context=".ui.creation.entry.pain.EntryPainFragment">
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="New Entry" android:gravity="center" android:textSize="32dp"/>
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Medication Information" android:gravity="center" android:textSize="24dp"/>
     <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">

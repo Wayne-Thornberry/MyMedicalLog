@@ -10,5 +10,5 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         app:layoutManager="LinearLayoutManager"
-        tools:context="com.medco.mymedicallog.EntryCreationActivity"
+        tools:context="com.medco.mymedicallog.CreationEntryActivity"
         tools:listitem="@layout/view_profile_log_item"/>

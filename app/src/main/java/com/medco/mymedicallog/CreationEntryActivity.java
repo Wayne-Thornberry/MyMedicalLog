@@ -1,30 +1,25 @@
 package com.medco.mymedicallog;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
-import android.util.Log;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.medco.mymedicallog.database.entities.ProfileLog;
 import com.medco.mymedicallog.database.entities.LogEntry;
 import com.medco.mymedicallog.interfaces.OnDisplayListFragmentInteractionListener;
 import com.medco.mymedicallog.interfaces.OnFragmentInteractionListener;
 import com.medco.mymedicallog.tasks.InsertEntriesTask;
-import com.medco.mymedicallog.fragments.EntryViewFragment;
+import com.medco.mymedicallog.ui.main.entry.EntryViewFragment;
 
 import java.util.Date;
 
-public class EntryCreationActivity extends AppCompatActivity implements OnFragmentInteractionListener, OnDisplayListFragmentInteractionListener {
+public class CreationEntryActivity extends AppCompatActivity implements OnFragmentInteractionListener, OnDisplayListFragmentInteractionListener {
 
     private int mViewDisplayed;
     private NavController mNavController;

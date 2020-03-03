@@ -21,11 +21,7 @@ import android.view.Menu;
 import com.medco.mymedicallog.database.entities.LogEntry;
 import com.medco.mymedicallog.interfaces.OnDisplayListFragmentInteractionListener;
 import com.medco.mymedicallog.interfaces.OnFragmentInteractionListener;
-import com.medco.mymedicallog.tasks.InsertEntriesTask;
 import com.medco.mymedicallog.tasks.LoadProfileTask;
-
-import java.util.Date;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements OnFragmentInteractionListener, OnDisplayListFragmentInteractionListener {
 
@@ -113,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
     }
 
     public void insertEntry(View view) {
-        Intent intent = new Intent(this, EntryCreationActivity.class);
+        Intent intent = new Intent(this, CreationEntryActivity.class);
         startActivityForResult(intent, 233);
     }
 

@@ -1,4 +1,4 @@
-package com.medco.mymedicallog.ui.creation.personal;
+package com.medco.mymedicallog.ui.creation.doctor.personal;
 
 import androidx.fragment.app.Fragment;
 

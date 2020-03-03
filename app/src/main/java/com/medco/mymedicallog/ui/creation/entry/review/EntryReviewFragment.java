@@ -1,26 +1,24 @@
-package com.medco.mymedicallog.ui.entry.pain;
+package com.medco.mymedicallog.ui.creation.entry.review;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import androidx.fragment.app.Fragment;
 import com.medco.mymedicallog.R;
 import com.medco.mymedicallog.interfaces.OnFragmentInteractionListener;
 
-public class EntryPainFragment extends Fragment {
+public class EntryReviewFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public EntryPainFragment() {
+    public EntryReviewFragment() {
         // Required empty public constructor
     }
 
-    public static EntryPainFragment newInstance() {
-        EntryPainFragment fragment = new EntryPainFragment();
+    public static EntryReviewFragment newInstance() {
+        EntryReviewFragment fragment = new EntryReviewFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -36,7 +34,7 @@ public class EntryPainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_entry_pain, container, false);
+        return inflater.inflate(R.layout.fragment_entry_review, container, false);
     }
 
     @Override

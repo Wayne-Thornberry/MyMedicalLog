@@ -17,7 +17,7 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ProfileCreationActivity">
+        <activity android:name=".CreationProfileActivity">
         </activity>
         <activity
                 android:name=".MainActivity"
@@ -30,9 +30,9 @@
         </activity>
         <activity android:name=".PortalActivity">
         </activity>
-        <activity android:name=".EntryCreationActivity">
+        <activity android:name=".CreationEntryActivity">
         </activity>
-        <activity android:name=".GatheringActivity">
+        <activity android:name=".CreationVoiceActivity">
         </activity>
     </application>
 

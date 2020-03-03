@@ -16,7 +16,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import com.medco.mymedicallog.interfaces.OnFragmentInteractionListener;
 
-public class ProfileCreationActivity extends AppCompatActivity implements OnFragmentInteractionListener {
+public class CreationProfileActivity extends AppCompatActivity implements OnFragmentInteractionListener {
 
     private AppBarConfiguration mAppBarConfiguration;
     private NavController mNavController;

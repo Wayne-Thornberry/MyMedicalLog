@@ -14,12 +14,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.fragment.app.FragmentTransaction;
 import com.medco.mymedicallog.interfaces.OnFragmentInteractionListener;
-import com.medco.mymedicallog.ui.entry.general.EntryGeneralFragment;
-import com.medco.mymedicallog.fragments.GatheringVoiceFragment;
+import com.medco.mymedicallog.ui.creation.entry.general.EntryGeneralFragment;
+import com.medco.mymedicallog.ui.creation.voice.input.VoiceInputFragment;
 
 import java.util.ArrayList;
 
-public class GatheringActivity extends AppCompatActivity implements OnFragmentInteractionListener {
+public class CreationVoiceActivity extends AppCompatActivity implements OnFragmentInteractionListener {
 
     private final int REQUEST_SPEECH_RECOGNIZER = 3000;
     private int mFragmentDisplaying;
@@ -29,9 +29,9 @@ public class GatheringActivity extends AppCompatActivity implements OnFragmentIn
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gathering);
 
-        GatheringVoiceFragment gatheringVoiceFragment = GatheringVoiceFragment.newInstance();
+        VoiceInputFragment voiceInputFragment = VoiceInputFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.container, gatheringVoiceFragment)
+                .replace(R.id.container, voiceInputFragment)
                 .commitNow();
         mFragmentDisplaying = 1;
     }
@@ -45,7 +45,7 @@ public class GatheringActivity extends AppCompatActivity implements OnFragmentIn
     }
 
     public void showLog(View view) {
-        Intent myIntent = new Intent(this, EntryCreationActivity.class);
+        Intent myIntent = new Intent(this, CreationEntryActivity.class);
         myIntent.putExtra("loadFragment", 1);
         startActivity(myIntent);
     }
@@ -91,10 +91,10 @@ public class GatheringActivity extends AppCompatActivity implements OnFragmentIn
             mFragmentDisplaying = 3;
             item.setTitle(R.string.switchToVoice);
         }else if(mFragmentDisplaying == 3){
-            GatheringVoiceFragment gatheringVoiceFragment = GatheringVoiceFragment.newInstance();
+            VoiceInputFragment voiceInputFragment = VoiceInputFragment.newInstance();
             getSupportFragmentManager().beginTransaction()
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE)
-                    .replace(R.id.container, gatheringVoiceFragment)
+                    .replace(R.id.container, voiceInputFragment)
                     .commitNow();
             mFragmentDisplaying = 1;
             item.setTitle(R.string.switchToText);

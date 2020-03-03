@@ -1,10 +1,11 @@
-package com.medco.mymedicallog.fragments;
+package com.medco.mymedicallog.ui.creation.profile.general;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.LinearLayout;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,17 +13,15 @@ import android.view.ViewGroup;
 import com.medco.mymedicallog.R;
 import com.medco.mymedicallog.interfaces.OnFragmentInteractionListener;
 
-public class GatheringVoiceFragment extends Fragment {
-
+public class ProfileGeneralFragment extends Fragment implements OnFragmentInteractionListener {
     private OnFragmentInteractionListener mListener;
 
-    public GatheringVoiceFragment() {
+    public ProfileGeneralFragment() {
         // Required empty public constructor
     }
 
-    // TODO: Rename and change types and number of parameters
-    public static GatheringVoiceFragment newInstance() {
-        GatheringVoiceFragment fragment = new GatheringVoiceFragment();
+    public static ProfileGeneralFragment newInstance() {
+        ProfileGeneralFragment fragment = new ProfileGeneralFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -33,20 +32,27 @@ public class GatheringVoiceFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gathering_recording, container, false);
+        View view = inflater.inflate(R.layout.fragment_creation_general, container, false);
+        CheckBox checkbox = view.findViewById(R.id.check_enable_security);
+        checkbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                LinearLayout mLinearLayout = buttonView.getRootView().findViewById(R.id.linear_security);
+                if(isChecked){
+                    mLinearLayout.setVisibility(View.VISIBLE);
+                }else{
+                    mLinearLayout.setVisibility(View.GONE);
+                }
+            }
+        });
+        return view;
     }
 
-    public void onButtonPressed(Uri uri) {
+    // TODO: Rename method, update argument and hook method into UI event
+    public void onProfileCreateBtnPressedd(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteractionListener(uri);
         }
@@ -67,5 +73,10 @@ public class GatheringVoiceFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onFragmentInteractionListener(Uri uri) {
+
     }
 }

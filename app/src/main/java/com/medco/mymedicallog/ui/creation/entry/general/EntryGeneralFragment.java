@@ -1,9 +1,8 @@
-package com.medco.mymedicallog.ui.entry.general;
+package com.medco.mymedicallog.ui.creation.entry.general;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;

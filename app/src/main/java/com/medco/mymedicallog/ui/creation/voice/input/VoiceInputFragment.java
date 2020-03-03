@@ -1,24 +1,28 @@
-package com.medco.mymedicallog.ui.entry.submit;
+package com.medco.mymedicallog.ui.creation.voice.input;
 
 import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import androidx.fragment.app.Fragment;
 import com.medco.mymedicallog.R;
 import com.medco.mymedicallog.interfaces.OnFragmentInteractionListener;
 
-public class EntryReviewFragment extends Fragment {
+public class VoiceInputFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public EntryReviewFragment() {
+    public VoiceInputFragment() {
         // Required empty public constructor
     }
 
-    public static EntryReviewFragment newInstance() {
-        EntryReviewFragment fragment = new EntryReviewFragment();
+    // TODO: Rename and change types and number of parameters
+    public static VoiceInputFragment newInstance() {
+        VoiceInputFragment fragment = new VoiceInputFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -27,14 +31,25 @@ public class EntryReviewFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
 
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_entry_review, container, false);
+        return inflater.inflate(R.layout.fragment_gathering_recording, container, false);
+    }
+
+    public void onButtonPressed(Uri uri) {
+        if (mListener != null) {
+            mListener.onFragmentInteractionListener(uri);
+        }
     }
 
     @Override

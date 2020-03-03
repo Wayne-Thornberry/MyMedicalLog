@@ -10,7 +10,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                tools:context=".ui.creation.general.ProfileGeneralFragment"
+                tools:context=".ui.creation.profile.general.ProfileGeneralFragment"
                 android:padding="23dp">
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
                       android:id="@+id/text_firstname" android:text=""/>

@@ -1,4 +1,4 @@
-package com.medco.mymedicallog.ui.option;
+package com.medco.mymedicallog.ui.main.option;
 
 import androidx.fragment.app.Fragment;
 

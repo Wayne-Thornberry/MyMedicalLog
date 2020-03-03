@@ -6,21 +6,21 @@
             app:startDestination="@id/nav_entry_general">
     <fragment
             android:id="@+id/nav_entry_general"
-            android:name="com.medco.mymedicallog.ui.entry.general.EntryGeneralFragment"
+            android:name="com.medco.mymedicallog.ui.creation.entry.general.EntryGeneralFragment"
             android:label="fragment_general"
             tools:layout="@layout/fragment_entry_general">
         <action android:id="@+id/action_nav_entry_general_to_nav_entry_pain" app:destination="@id/nav_entry_pain"/>
     </fragment>
     <fragment
             android:id="@+id/nav_entry_pain"
-            android:name="com.medco.mymedicallog.ui.entry.pain.EntryPainFragment"
+            android:name="com.medco.mymedicallog.ui.creation.entry.pain.EntryPainFragment"
             android:label="fragment_pain"
             tools:layout="@layout/fragment_entry_pain">
         <action android:id="@+id/action_nav_entry_pain_to_nav_entry_location" app:destination="@id/nav_entry_location"/>
     </fragment>
     <fragment
             android:id="@+id/nav_entry_location"
-            android:name="com.medco.mymedicallog.ui.entry.location.EntryLocationFragment"
+            android:name="com.medco.mymedicallog.ui.creation.entry.location.EntryLocationFragment"
             android:label="fragment_location"
             tools:layout="@layout/fragment_entry_location">
         <action android:id="@+id/action_nav_entry_location_to_nav_entry_medication"
@@ -28,13 +28,13 @@
     </fragment>
     <fragment
             android:id="@+id/nav_entry_medication"
-            android:name="com.medco.mymedicallog.ui.entry.medication.EntryMedicationFragment"
+            android:name="com.medco.mymedicallog.ui.creation.entry.medication.EntryMedicationFragment"
             android:label="fragment_medication"
             tools:layout="@layout/fragment_entry_medication">
     </fragment>
     <fragment
             android:id="@+id/nav_entry_review"
-            android:name="com.medco.mymedicallog.ui.entry.submit.EntryReviewFragment"
+            android:name="com.medco.mymedicallog.ui.creation.entry.review.EntryReviewFragment"
             android:label="fragment_review"
             tools:layout="@layout/fragment_entry_review">
     </fragment>

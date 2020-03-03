@@ -1,4 +1,4 @@
-package com.medco.mymedicallog.ui.entry.location;
+package com.medco.mymedicallog.ui.creation.entry.location;
 
 import android.content.Context;
 import android.os.Bundle;

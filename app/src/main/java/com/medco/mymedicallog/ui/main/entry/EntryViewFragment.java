@@ -1,11 +1,8 @@
-package com.medco.mymedicallog.ui.creation.general;
+package com.medco.mymedicallog.ui.main.entry;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.LinearLayout;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,15 +10,16 @@ import android.view.ViewGroup;
 import com.medco.mymedicallog.R;
 import com.medco.mymedicallog.interfaces.OnFragmentInteractionListener;
 
-public class ProfileGeneralFragment extends Fragment implements OnFragmentInteractionListener {
+public class EntryViewFragment extends Fragment {
+
     private OnFragmentInteractionListener mListener;
 
-    public ProfileGeneralFragment() {
+    public EntryViewFragment() {
         // Required empty public constructor
     }
 
-    public static ProfileGeneralFragment newInstance() {
-        ProfileGeneralFragment fragment = new ProfileGeneralFragment();
+    public static EntryViewFragment newInstance() {
+        EntryViewFragment fragment = new EntryViewFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -35,24 +33,12 @@ public class ProfileGeneralFragment extends Fragment implements OnFragmentIntera
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_creation_general, container, false);
-        CheckBox checkbox = view.findViewById(R.id.check_enable_security);
-        checkbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                LinearLayout mLinearLayout = buttonView.getRootView().findViewById(R.id.linear_security);
-                if(isChecked){
-                    mLinearLayout.setVisibility(View.VISIBLE);
-                }else{
-                    mLinearLayout.setVisibility(View.GONE);
-                }
-            }
-        });
-        return view;
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_entry_view, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
-    public void onProfileCreateBtnPressedd(Uri uri) {
+    public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteractionListener(uri);
         }
@@ -73,10 +59,5 @@ public class ProfileGeneralFragment extends Fragment implements OnFragmentIntera
     public void onDetach() {
         super.onDetach();
         mListener = null;
-    }
-
-    @Override
-    public void onFragmentInteractionListener(Uri uri) {
-
     }
 }
