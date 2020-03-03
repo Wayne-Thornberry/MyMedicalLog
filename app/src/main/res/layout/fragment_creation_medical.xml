@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Profile Setup" android:gravity="center" android:textSize="32dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Medical Information" android:gravity="center" android:textSize="24dp"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:context=".ui.creation.general.ProfileGeneralFragment"
+                android:padding="23dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/text_firstname" android:text=""/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/input_firstname" android:hint=""/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/text_lastname" android:text="@string/label_last_name"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/input_lastname" android:hint=""/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/text_dob"
+                      android:text="Date of Birth"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/input_dob"
+                      android:hint=""/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/text_emailaddress" android:text="Email Address"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/input_emailaddress" android:hint=""/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/text_addressline1" android:text="Address Line 1"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/input_addressline1" android:hint=""/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/text_addressline2" android:text="Address Line 2"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/input_addressline2" android:hint=""/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/text_addressline3" android:text="Address Line 3"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/input_addressline3" android:hint=""/>
+        </LinearLayout>
+    </ScrollView>
+    <Button android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/cardview_dark_background" android:layout_weight="1" android:text="Finish"/>
+</LinearLayout>

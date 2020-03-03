@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/creation_navigation"
+            app:startDestination="@+id/nav_creation_general">
+
+    <fragment
+            android:id="@+id/nav_creation_general"
+            android:name="com.medco.mymedicallog.ui.creation.general.ProfileGeneralFragment"
+            tools:layout="@layout/fragment_creation_general">
+    </fragment>
+
+    <fragment
+            android:id="@+id/nav_creation_personal"
+            android:name="com.medco.mymedicallog.ui.creation.personal.ProfilePersonalFragment"
+            tools:layout="@layout/fragment_creation_personal">
+    </fragment>
+
+    <fragment
+            android:id="@+id/nav_creation_medical"
+            android:name="com.medco.mymedicallog.ui.creation.medical.ProfileMedicalFragment"
+            tools:layout="@layout/fragment_creation_medical"/>
+</navigation>

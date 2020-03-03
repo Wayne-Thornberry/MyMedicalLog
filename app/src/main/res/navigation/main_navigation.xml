@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/main_navigation"
+            app:startDestination="@+id/nav_summery">
+    <fragment
+            android:id="@+id/nav_profile"
+            android:name="com.medco.mymedicallog.ui.main.profile.MainProfileFragment"
+            android:label="@string/menu_profile"
+            tools:layout="@layout/fragment_profile_view"/>
+
+    <fragment
+            android:id="@+id/nav_summery"
+            android:name="com.medco.mymedicallog.ui.main.summery.MainSummeryFragment"
+            android:label="@string/menu_summery"
+            tools:layout="@layout/fragment_summery"/>
+
+    <fragment
+            android:id="@+id/nav_log"
+            android:name="com.medco.mymedicallog.ui.main.log.MainLogFragment"
+            android:label="@string/menu_log"
+            tools:layout="@layout/fragment_log"/>
+
+    <fragment
+            android:id="@+id/nav_avatar"
+            android:name="com.medco.mymedicallog.ui.main.avatar.MainAvatarFragment"
+            android:label="@string/menu_avatar"
+            tools:layout="@layout/fragment_avatar"
+    />
+
+</navigation>

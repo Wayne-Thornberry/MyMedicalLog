@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".ui.entry.pain.EntryPainFragment">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="New Entry" android:gravity="center" android:textSize="32dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Pain Information" android:gravity="center" android:textSize="24dp"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:textSize="20sp"
+                      android:text="Pain Duration" android:id="@+id/textView8"
+                      android:textAlignment="viewStart" android:fontFamily="sans-serif-black"/>
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textSize="20sp"
+                      android:id="@+id/input_pain_duration"
+            />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:textSize="20sp"
+                      android:text="Pain Severity" android:id="@+id/textView9"
+                      android:textAlignment="viewStart" android:fontFamily="sans-serif-black"/>
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textSize="20sp"
+                      android:id="@+id/input_pain_severity"
+            />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:textSize="20sp"
+                      android:text="Pain Type" android:id="@+id/textView12"
+                      android:textAlignment="viewStart" android:fontFamily="sans-serif-black"/>
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textSize="20sp"
+                      android:id="@+id/input_pain_type"
+            />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:textSize="20sp"
+                      android:text="Pain Experience" android:id="@+id/textView14"
+                      android:textAlignment="viewStart" android:fontFamily="sans-serif-black"/>
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textSize="20sp"
+                      android:id="@+id/input_pain_experience"
+            />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -20,4 +20,39 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="action_next">Next</string>
+    <string name="action_prev">Prev</string>
+
+    <string name="menu_profile">Profile</string>
+    <string name="menu_summery">Summery</string>
+    <string name="menu_log">Log</string>
+    <string name="menu_avatar">Avatar</string>
+
+    <string name="label_profile_name">Profile Name</string>
+    <string name="label_security_pin">Pin (4 Digits Max)</string>
+    <string name="label_security_password">Password (Max 24 Characters)</string>
+
+    <string name="label_first_name">First Name</string>
+    <string name="label_last_name">Last Name</string>
+    <string name="label_date_of_birth">Date of Birth</string>
+    <string name="label_email_address">Email Address</string>
+    <string name="label_address_line_one">Address Line One</string>
+    <string name="label_address_line_two">Address Line Two</string>
+    <string name="label_address_line_three">Address Line Three</string>
+
+    <string name="label_btn_finish">Finish</string>
+    <string name="label_info2">Do you wish to automatically send anonymous log entries to our servers?</string>
+    <string name="label_info1">Do you wish for us to backup this log on our servers after each new entry?</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_switch">Switch Profiles</string>
+    <string name="menu_connect">Connect To Doctor</string>
+
 </resources>

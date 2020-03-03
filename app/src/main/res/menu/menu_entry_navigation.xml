@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/nav_entry_general"
+          android:icon="@color/colorPrimary"
+          android:title="General"
+          app:showAsAction="always"/>
+    <item android:id="@+id/nav_entry_pain"
+          android:icon="@color/colorAccent"
+          android:title="Pain"
+          app:showAsAction="always"/>
+    <item android:id="@+id/nav_entry_location"
+          android:icon="@color/colorPrimary"
+          android:title="Location"
+          app:showAsAction="always"/>
+    <item android:id="@+id/nav_entry_medication"
+          android:icon="@color/colorAccent"
+          android:title="Medication"
+          app:showAsAction="always"/>
+    <item android:id="@+id/nav_entry_review"
+          android:icon="@color/colorPrimary"
+          android:title="Review"
+          app:showAsAction="always"/>
+</menu>

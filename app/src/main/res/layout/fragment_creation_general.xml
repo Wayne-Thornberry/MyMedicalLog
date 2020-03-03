@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".ui.creation.general.ProfileGeneralFragment">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Profile Setup" android:gravity="center" android:textSize="32dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="General Information" android:gravity="center" android:textSize="24dp"/>
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:context=".ui.creation.general.ProfileGeneralFragment"
+                android:padding="23dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/text_name" android:text="@string/label_profile_name"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/input_name" android:hint=""/>
+            <CheckBox android:layout_width="match_parent" android:id="@+id/check_enable_security" android:layout_height="wrap_content" android:text="Do you wish to setup security options"/>
+            <LinearLayout android:id="@+id/linear_security" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:layout_marginTop="32dp" android:layout_marginBottom="32dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Leave bank to not enable that security option"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:id="@+id/text_password" android:text="@string/label_security_password"/>
+                <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:id="@+id/input_password" android:hint=""/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:id="@+id/text_pin" android:text="@string/label_security_pin"/>
+                <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:id="@+id/input_pin" android:hint=""/>
+            </LinearLayout>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_info2"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_info1"/>
+            <Button
+                    android:layout_marginTop="32dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="@color/cardview_dark_background"
+                    android:text="@string/label_btn_finish"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
