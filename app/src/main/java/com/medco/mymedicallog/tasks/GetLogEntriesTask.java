@@ -25,7 +25,7 @@ public class GetLogEntriesTask extends AsyncTask<Long, Void, List<LogEntry>> {
     protected List<LogEntry> doInBackground(Long... longs) {
         Log.e("Retriving Entries", "Retriving");
         Activity activity = mActivity.get();
-        return MainDatabase.getInstance(activity).entryDao().getEntriesFromLog(longs[0]);
+        return MainDatabase.getInstance(activity).entryDao().getEntries();
     }
 
     @Override
@@ -33,6 +33,6 @@ public class GetLogEntriesTask extends AsyncTask<Long, Void, List<LogEntry>> {
         Log.e("Retriving Entries", "Done");
         MyProfile myProfile = MyProfile.getInstance();
         myProfile.setEntries(logEntries);
-        mListener.onTaskComplete(0);
+        mListener.onTaskComplete(2000);
     }
 }

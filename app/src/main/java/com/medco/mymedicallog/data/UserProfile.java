@@ -7,4 +7,5 @@ public class UserProfile implements Serializable {
     public String lastName;
     public boolean isProfileSetup;
     public boolean isDoctorSetup;
+    public int doctorId;
 }

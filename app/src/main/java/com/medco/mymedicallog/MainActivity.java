@@ -4,7 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Toast;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import android.view.View;
 import androidx.navigation.NavController;
@@ -20,8 +24,9 @@ import android.view.Menu;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.medco.mymedicallog.data.DoctorProfile;
-import com.medco.mymedicallog.data.DoctorRequest;
+import com.medco.mymedicallog.data.messages.DoctorRequestMessage;
 import com.medco.mymedicallog.data.UserProfile;
+import com.medco.mymedicallog.data.messages.EntryViewedMessage;
 import com.medco.mymedicallog.database.entities.LogEntry;
 import com.medco.mymedicallog.database.entities.ProfileLog;
 import com.medco.mymedicallog.interfaces.OnLogEntryListFragmentInteractionListener;
@@ -29,9 +34,9 @@ import com.medco.mymedicallog.interfaces.OnFragmentInteractionListener;
 import com.medco.mymedicallog.interfaces.OnProfileLogListFragmentInteractionListener;
 import com.medco.mymedicallog.interfaces.OnTaskCompleteListener;
 import com.medco.mymedicallog.services.RabbitMQService;
-import com.medco.mymedicallog.tasks.InsertEntriesTask;
-import com.medco.mymedicallog.tasks.InsertLogTask;
-import com.medco.mymedicallog.tasks.SendQueueTask;
+import com.medco.mymedicallog.tasks.*;
+import com.rabbitmq.client.DeliverCallback;
+import com.rabbitmq.client.Delivery;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -53,6 +58,8 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        new GetLogsTask(this, this).execute();
+        new GetLogEntriesTask(this, this).execute();
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -75,9 +82,6 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         NavigationUI.setupWithNavController(mNavigationView, mNavController);
         loadProfile();
         refreshMenu();
-        RabbitMQService.startRabbitMQReciving(this, 202);
-        //new ReceiveQueueTask().execute(202);
-
     }
 
     private void saveProfile(UserProfile userProfile){
@@ -136,9 +140,14 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
                 mUserProfile = userProfile;
                 refreshMenu();
             }else if(requestCode == 255){
-                DoctorRequest request = (DoctorRequest) intent.getSerializableExtra("DOCTORREQUEST");
+                DoctorRequestMessage request = (DoctorRequestMessage) intent.getSerializableExtra("DOCTORREQUEST");
                 String data = mGson.toJson(request);
+                mUserProfile.doctorId = request.doctorID;
+                mUserProfile.isDoctorSetup = true;
+                saveProfile(mUserProfile);
                 new SendQueueTask("DOCTOR_REQUEST", request.doctorID).execute(data);
+                finish();
+                startActivity(this.getIntent());
             }
         }
     }
@@ -223,7 +232,9 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
             finish();
             startActivity(getIntent());
         }else if(responseCode == 233){
-            mNavController.navigate(R.id.nav_entries);
+            finish();
+            startActivity(getIntent());
         }
     }
+
 }

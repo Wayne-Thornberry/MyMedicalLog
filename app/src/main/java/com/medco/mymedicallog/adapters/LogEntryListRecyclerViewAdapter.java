@@ -39,7 +39,8 @@ public class LogEntryListRecyclerViewAdapter extends RecyclerView.Adapter<LogEnt
         holder.mItem = mValues.get(position);
         holder.mIdView.setText(mValues.get(position).entryId + "");
         holder.mContentView.setText(mValues.get(position).fullDescription);
-
+        if(holder.mItem.viewed)
+            holder.mViewed.setVisibility(View.VISIBLE);
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

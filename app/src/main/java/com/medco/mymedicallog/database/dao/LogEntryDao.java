@@ -14,6 +14,9 @@ public interface LogEntryDao {
     void delete(LogEntry logEntry);
 
     @Transaction
-    @Query("SELECT * FROM LogEntry WHERE logId = :logId")
-    List<LogEntry> getEntriesFromLog(long logId);
+    @Query("SELECT * FROM LogEntry")
+    List<LogEntry> getEntries();
+
+    @Update(onConflict = OnConflictStrategy.IGNORE)
+    void update(LogEntry[] entries);
 }

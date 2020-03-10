@@ -32,4 +32,6 @@ public class LogEntry implements Serializable {
     public String fullDescription;
     @ColumnInfo(name = "medication_used")
     public String medicationUsed;
+    @ColumnInfo(name = "doctor_viewed")
+    public boolean viewed;
 }

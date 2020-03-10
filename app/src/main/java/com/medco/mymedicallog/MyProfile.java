@@ -3,6 +3,7 @@ package com.medco.mymedicallog;
 import com.medco.mymedicallog.database.entities.LogEntry;
 import com.medco.mymedicallog.database.entities.ProfileLog;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MyProfile {
@@ -54,6 +55,16 @@ public class MyProfile {
 
     public List<LogEntry> getEntries() {
         return mEntries;
+    }
+
+    public List<LogEntry> getEntries(long id) {
+        ArrayList<LogEntry> entries = new ArrayList<LogEntry>();
+        for (LogEntry entry: mEntries) {
+            if(entry.logId == id){
+                entries.add(entry);
+            }
+        }
+        return entries;
     }
 
     public ProfileLog getActiveLog() {

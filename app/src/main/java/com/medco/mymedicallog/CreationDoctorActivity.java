@@ -7,7 +7,7 @@ import android.util.Log;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import com.medco.mymedicallog.data.DoctorRequest;
+import com.medco.mymedicallog.data.messages.DoctorRequestMessage;
 import com.medco.mymedicallog.data.UserProfile;
 import com.medco.mymedicallog.interfaces.OnFragmentInteractionListener;
 
@@ -30,7 +30,7 @@ public class CreationDoctorActivity extends AppCompatActivity implements OnFragm
 
     public void submitDetails(View view) {
         Intent intent = new Intent();
-        DoctorRequest profile = new DoctorRequest();
+        DoctorRequestMessage profile = new DoctorRequestMessage();
         profile.doctorID = 25565;
         profile.passcode = 2354;
         profile.userProfile = mUserProfile;

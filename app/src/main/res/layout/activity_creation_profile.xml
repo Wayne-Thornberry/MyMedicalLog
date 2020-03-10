@@ -19,5 +19,5 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <fragment android:name="com.medco.mymedicallog.ui.creation.userProfile.ProfileCreationFragment" android:id="@+id/fragment_creation_profile" android:layout_width="match_parent" android:layout_height="match_parent" tools:layout="@layout/fragment_creation_profile"/>
+    <fragment android:name="com.medco.mymedicallog.ui.creation.profile.ProfileCreationFragment" android:id="@+id/fragment_creation_profile" android:layout_width="match_parent" android:layout_height="match_parent" tools:layout="@layout/fragment_creation_profile"/>
 </LinearLayout>

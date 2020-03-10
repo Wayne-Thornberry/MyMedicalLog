@@ -18,7 +18,7 @@ import com.medco.mymedicallog.tasks.GetLogsTask;
 
 import java.util.ArrayList;
 
-public class LogSelectionFragment extends Fragment implements OnProfileLogListFragmentInteractionListener, OnTaskCompleteListener {
+public class LogSelectionFragment extends Fragment implements OnProfileLogListFragmentInteractionListener {
 
     private OnProfileLogListFragmentInteractionListener mListener;
     private RecyclerView mListView;
@@ -34,9 +34,9 @@ public class LogSelectionFragment extends Fragment implements OnProfileLogListFr
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_drawer_logs, container, false);
-        new GetLogsTask(this.getActivity(), this).execute();
         mListView = view.findViewById(R.id.log_list);
-        mListView.setAdapter(new ProfileLogListRecyclerViewAdapter(new ArrayList<ProfileLog>(), mListener));
+        mListView.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        mListView.setAdapter(new ProfileLogListRecyclerViewAdapter(MyProfile.getInstance().getLogs(), mListener));
         return view;
     }
 
@@ -62,11 +62,5 @@ public class LogSelectionFragment extends Fragment implements OnProfileLogListFr
     public void onListFragmentInteractionListener(ProfileLog item, int position) {
         if(mListener != null)
             mListener.onListFragmentInteractionListener(item, position);
-    }
-
-    @Override
-    public void onTaskComplete(int responseCode) {
-        mListView.setLayoutManager(new LinearLayoutManager(this.getContext()));
-        mListView.setAdapter(new ProfileLogListRecyclerViewAdapter(MyProfile.getInstance().getLogs(), mListener));
     }
 }

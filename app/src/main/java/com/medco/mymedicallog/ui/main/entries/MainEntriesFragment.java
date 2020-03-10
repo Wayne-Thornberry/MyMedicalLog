@@ -17,14 +17,16 @@ import com.medco.mymedicallog.adapters.LogEntryListRecyclerViewAdapter;
 import com.medco.mymedicallog.database.entities.LogEntry;
 import com.medco.mymedicallog.interfaces.OnLogEntryListFragmentInteractionListener;
 import com.medco.mymedicallog.interfaces.OnTaskCompleteListener;
+import com.medco.mymedicallog.services.RabbitMQService;
 import com.medco.mymedicallog.tasks.GetLogEntriesTask;
 import com.medco.mymedicallog.tasks.SendQueueTask;
 
 import java.util.List;
 
 import static com.medco.mymedicallog.MainActivity.mDoctorProfile;
+import static com.medco.mymedicallog.MainActivity.mUserProfile;
 
-public class MainEntriesFragment extends Fragment implements OnTaskCompleteListener {
+public class MainEntriesFragment extends Fragment {
 
     private OnLogEntryListFragmentInteractionListener mListener;
     private RecyclerView mListView;
@@ -42,8 +44,17 @@ public class MainEntriesFragment extends Fragment implements OnTaskCompleteListe
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main_log, container, false);
         Context context = view.getContext();
-        new GetLogEntriesTask(this.getActivity(), this).execute(MyProfile.getInstance().getActiveLog().logId);
         mListView = view.findViewById(R.id.list);
+
+        mListView.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        List<LogEntry> entries = MyProfile.getInstance().getEntries(MyProfile.getInstance().getActiveLog().logId);
+        mListView.setAdapter(new LogEntryListRecyclerViewAdapter(entries, mListener));
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String entrys = gson.toJson(entries);
+        Log.e("ID", mDoctorProfile.Id + "");
+        RabbitMQService.startRabbitMQReciving(this.getContext(), mUserProfile, 202);
+        new SendQueueTask("LOG_UPLOAD", mDoctorProfile.Id).execute(entrys);
+
         return view;
     }
 
@@ -62,16 +73,5 @@ public class MainEntriesFragment extends Fragment implements OnTaskCompleteListe
     public void onDetach() {
         super.onDetach();
         mListener = null;
-    }
-
-    @Override
-    public void onTaskComplete(int responseCode) {
-        mListView.setLayoutManager(new LinearLayoutManager(this.getContext()));
-        List<LogEntry> entries = MyProfile.getInstance().getEntries();
-        mListView.setAdapter(new LogEntryListRecyclerViewAdapter(entries, mListener));
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        String entrys = gson.toJson(entries);
-        Log.e("ID", mDoctorProfile.Id + "");
-        new SendQueueTask("LOG_UPLOAD", mDoctorProfile.Id).execute(entrys);
     }
 }
