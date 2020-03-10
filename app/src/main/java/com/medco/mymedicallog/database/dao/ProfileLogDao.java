@@ -14,7 +14,6 @@ public interface ProfileLogDao {
     @Delete
     void delete(ProfileLog profileLog);
 
-    @Transaction
-    @Query("SELECT * FROM ProfileLog WHERE profileId = :profileId")
-    List<ProfileLog> getLogsFromProfile(long profileId);
+    @Query("SELECT * FROM ProfileLog")
+    List<ProfileLog> getLogs();
 }

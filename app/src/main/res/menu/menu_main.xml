@@ -2,44 +2,84 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:tools="http://schemas.android.com/tools"
       tools:showIn="navigation_view"
-tools:context=".MainActivity">
+      tools:context=".MainActivity">
 
-    <group android:id="@+id/doctor" android:checkableBehavior="single">
-        <item
-                android:id="@+id/nav_connect"
-                android:icon="@drawable/ic_menu_camera"
-                android:title="@string/menu_connect"/>
-        <item
-                android:id="@+id/nav_profile"
-                android:icon="@drawable/ic_menu_camera"
-                android:title="@string/menu_profile"/>
+    <group android:id="@+id/group_doctor" android:checkableBehavior="single" android:visible="false">
+        <group android:id="@+id/group_doctor_setup" android:checkableBehavior="single" android:visible="false">
+            <item
+                    android:id="@+id/nav_doctor_connect"
+                    android:onClick="startDoctorCreationActivity"
+                    android:title="Connect to your doctor"/>
+        </group>
+
+        <group android:id="@+id/group_doctor_general" android:checkableBehavior="single" android:visible="false">
+            <item
+                    android:id="@+id/nav_doctor_sync"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="@string/menu_profile"/>
+            <item
+                    android:id="@+id/nav_doctor_services"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="@string/menu_profile"/>
+            <item
+                    android:id="@+id/nav_doctor_comments"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="@string/menu_profile"/>
+        </group>
     </group>
 
-    <group android:id="@+id/mains" android:checkableBehavior="single">
+    <group android:id="@+id/group_profile" android:checkableBehavior="single" android:visible="true">
+        <group android:id="@+id/group_profile_setup" android:checkableBehavior="single" android:visible="true">
+            <item
+                    android:id="@+id/nav_profie_creation"
+                    android:onClick="startProfileCreationActivity"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="Setup a userProfile"/>
+        </group>
+
+        <group android:id="@+id/group_profile_general" android:checkableBehavior="single" android:visible="false">
+            <item
+                    android:id="@+id/nav_profile_summery"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="Profile Summery"/>
+            <item
+                    android:id="@+id/nav_profile_history"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="Profile Information"/>
+            <item
+                    android:id="@+id/nav_profile_edit"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="Edit Profile"/>
+        </group>
+    </group>
+
+    <group android:id="@+id/group_general" android:checkableBehavior="single">
         <item
                 android:id="@+id/nav_summery"
                 android:icon="@drawable/ic_menu_camera"
-                android:title="@string/menu_summery"/>
+                android:title="Log Summery"/>
         <item
-                android:id="@+id/nav_log"
+                android:id="@+id/nav_entries"
                 android:icon="@drawable/ic_menu_gallery"
-                android:title="@string/menu_log"/>
+                android:title="Log Entries"/>
         <item
                 android:id="@+id/nav_avatar"
                 android:icon="@drawable/ic_menu_slideshow"
-                android:title="@string/menu_avatar"/>
+                android:title="Log Avatar"/>
     </group>
 
-    <group android:id="@+id/options" android:checkableBehavior="single">
+    <group android:id="@+id/group_services" android:checkableBehavior="single">
+        <item
+                android:id="@+id/nav_service_emergancy"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="Emergency Services"/>
+    </group>
+
+    <group android:id="@+id/group_options" android:checkableBehavior="single">
         <item
                 android:id="@+id/nav_settings"
                 android:icon="@drawable/ic_menu_camera"
                 android:title="@string/menu_settings"/>
-        <item
-                android:id="@+id/nav_switch"
-                android:icon="@drawable/ic_menu_camera"
-                android:title="@string/menu_switch"
-                android:onClick="switchProfiles"/>
     </group>
 
 </menu>

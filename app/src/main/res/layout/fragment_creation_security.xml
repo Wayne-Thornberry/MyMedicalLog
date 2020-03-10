@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".ui.creation.log.general.LogGeneralFragment">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Profile Setup" android:gravity="center" android:textSize="32dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Security Information" android:gravity="center" android:textSize="24dp"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@+id/linear_security" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:layout_marginTop="32dp" android:layout_marginBottom="32dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Leave bank to not enable that security option"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/text_password" android:text="@string/label_security_password"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/input_password" android:hint=""/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/text_pin" android:text="@string/label_security_pin"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/input_pin" android:hint=""/>
+        </LinearLayout>
+    </ScrollView>
+    <Button android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/colorPrimary" android:layout_weight="1" android:text="Continue"/>
+</LinearLayout>

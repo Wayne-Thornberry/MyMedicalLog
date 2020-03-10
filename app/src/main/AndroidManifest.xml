@@ -17,7 +17,18 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             tools:ignore="GoogleAppIndexingWarning">
+        <service
+                android:name=".services.RabbitMQService"
+                android:exported="false">
+        </service>
+
+        <activity android:name=".CreationDoctorActivity">
+        </activity>
         <activity android:name=".CreationProfileActivity">
+        </activity>
+        <activity android:name=".EntryViewActivity">
+        </activity>
+        <activity android:name=".CreationLogActivity">
         </activity>
         <activity
                 android:name=".MainActivity"
@@ -28,11 +39,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".PortalActivity">
-        </activity>
         <activity android:name=".CreationEntryActivity">
-        </activity>
-        <activity android:name=".CreationVoiceActivity">
         </activity>
     </application>
 

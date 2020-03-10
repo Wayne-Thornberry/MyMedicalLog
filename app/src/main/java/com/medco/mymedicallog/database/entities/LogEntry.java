@@ -5,10 +5,11 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-public class LogEntry {
+public class LogEntry implements Serializable {
     @PrimaryKey(autoGenerate = true)
     public long entryId;
     @ColumnInfo(name = "logId")

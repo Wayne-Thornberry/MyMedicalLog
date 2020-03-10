@@ -6,27 +6,27 @@
             app:startDestination="@+id/nav_summery">
     <fragment
             android:id="@+id/nav_profile"
-            android:name="com.medco.mymedicallog.ui.main.profile.MainProfileFragment"
+            android:name="com.medco.mymedicallog.ui.main.userProfile.MainProfileFragment"
             android:label="@string/menu_profile"
-            tools:layout="@layout/fragment_profile_view"/>
+            tools:layout="@layout/fragment_main_profile"/>
 
     <fragment
             android:id="@+id/nav_summery"
             android:name="com.medco.mymedicallog.ui.main.summery.MainSummeryFragment"
             android:label="@string/menu_summery"
-            tools:layout="@layout/fragment_summery"/>
+            tools:layout="@layout/fragment_main_summery"/>
 
     <fragment
-            android:id="@+id/nav_log"
-            android:name="com.medco.mymedicallog.ui.main.log.MainLogFragment"
-            android:label="@string/menu_log"
-            tools:layout="@layout/fragment_log"/>
+            android:id="@+id/nav_entries"
+            android:name="com.medco.mymedicallog.ui.main.entries.MainEntriesFragment"
+            android:label="@string/menu_entries"
+            tools:layout="@layout/fragment_main_log"/>
 
     <fragment
             android:id="@+id/nav_avatar"
             android:name="com.medco.mymedicallog.ui.main.avatar.MainAvatarFragment"
             android:label="@string/menu_avatar"
-            tools:layout="@layout/fragment_avatar"
+            tools:layout="@layout/fragment_main_avatar"
     />
 
 </navigation>

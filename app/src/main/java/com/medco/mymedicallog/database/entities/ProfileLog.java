@@ -11,8 +11,6 @@ import java.util.Date;
 public class ProfileLog implements Serializable {
     @PrimaryKey(autoGenerate = true)
     public long logId;
-    @ColumnInfo(name = "profileId")
-    public long profileId;
     @ColumnInfo(name = "date_created")
     public Date dateCreated;
     @ColumnInfo(name = "date_updated")

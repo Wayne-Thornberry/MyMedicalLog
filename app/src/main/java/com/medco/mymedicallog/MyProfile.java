@@ -2,7 +2,6 @@ package com.medco.mymedicallog;
 
 import com.medco.mymedicallog.database.entities.LogEntry;
 import com.medco.mymedicallog.database.entities.ProfileLog;
-import com.medco.mymedicallog.database.entities.Profile;
 
 import java.util.List;
 
@@ -10,7 +9,6 @@ public class MyProfile {
 
     private static MyProfile mInstance;
 
-    private Profile mProfile;
     private List<ProfileLog> mProfileLogs;
     private List<LogEntry> mEntries;
 
@@ -21,10 +19,6 @@ public class MyProfile {
         if(mInstance == null)
             mInstance = new MyProfile();
         return mInstance;
-    }
-
-    public void setProfile(Profile profile) {
-        mProfile = profile;
     }
 
     public void setLogs(List<ProfileLog> profileLogs){
@@ -43,14 +37,10 @@ public class MyProfile {
         return mProfileLogs;
     }
 
-    public Profile getProfile(){
-        return mProfile;
-    }
 
     @Override
     public String toString() {
         return "MyProfile{" +
-                "mProfile=" + mProfile +
                 ", mLogs=" + mProfileLogs +
                 ", mEntries=" + mEntries +
                 ", mSelectedLog=" + mSelectedProfileLog +
@@ -67,6 +57,7 @@ public class MyProfile {
     }
 
     public ProfileLog getActiveLog() {
+        if(mSelectedProfileLog == null) setActiveLog(0);
         return mSelectedProfileLog;
     }
 }

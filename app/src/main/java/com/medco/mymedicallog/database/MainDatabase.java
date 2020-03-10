@@ -7,15 +7,12 @@ import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 import com.medco.mymedicallog.database.dao.LogEntryDao;
 import com.medco.mymedicallog.database.dao.ProfileLogDao;
-import com.medco.mymedicallog.database.dao.ProfileDao;
 import com.medco.mymedicallog.database.entities.LogEntry;
 import com.medco.mymedicallog.database.entities.ProfileLog;
-import com.medco.mymedicallog.database.entities.Profile;
 
 @TypeConverters({Converters.class})
-@Database(entities = {Profile.class, LogEntry.class, ProfileLog.class}, version = 2)
+@Database(entities = {LogEntry.class, ProfileLog.class}, version = 3)
 public abstract class MainDatabase extends RoomDatabase {
-    public abstract ProfileDao profileDao();
     public abstract ProfileLogDao logDao();
     public abstract LogEntryDao entryDao();
     public static MainDatabase _instance;

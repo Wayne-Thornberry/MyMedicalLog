@@ -1,5 +1,6 @@
 package com.medco.mymedicallog;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.Menu;
@@ -12,14 +13,12 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.medco.mymedicallog.database.entities.LogEntry;
-import com.medco.mymedicallog.interfaces.OnDisplayListFragmentInteractionListener;
+import com.medco.mymedicallog.interfaces.OnLogEntryListFragmentInteractionListener;
 import com.medco.mymedicallog.interfaces.OnFragmentInteractionListener;
-import com.medco.mymedicallog.tasks.InsertEntriesTask;
-import com.medco.mymedicallog.ui.main.entry.EntryViewFragment;
 
 import java.util.Date;
 
-public class CreationEntryActivity extends AppCompatActivity implements OnFragmentInteractionListener, OnDisplayListFragmentInteractionListener {
+public class CreationEntryActivity extends AppCompatActivity implements OnFragmentInteractionListener, OnLogEntryListFragmentInteractionListener {
 
     private int mViewDisplayed;
     private NavController mNavController;
@@ -28,18 +27,13 @@ public class CreationEntryActivity extends AppCompatActivity implements OnFragme
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_entry);
+        setContentView(R.layout.activity_creation_entry);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         mNavigationView = findViewById(R.id.bottom_navigation);
         mNavController = Navigation.findNavController(this, R.id.nav_host_fragments);
         NavigationUI.setupWithNavController(mNavigationView, mNavController);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_creation_options, menu);
-        return super.onCreateOptionsMenu(menu);
     }
 
 
@@ -49,20 +43,16 @@ public class CreationEntryActivity extends AppCompatActivity implements OnFragme
     }
 
     @Override
-    public void onFragmentInteractionListener(Uri uri) {
+    public void onFragmentInteraction(Uri uri) {
 
     }
 
     @Override
-    public void onListFragmentInteraction(LogEntry item) {
-        EntryViewFragment entryViewFragment = EntryViewFragment.newInstance();
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.container, entryViewFragment)
-                .commitNow();
-        mViewDisplayed = 3;
+    public void onListFragmentInteractionListener(LogEntry item) {
+
     }
 
-    public void insertEntry(View view) {
+    public void finishEntry(View view) {
         LogEntry logEntry = new LogEntry();
         logEntry.logId = MyProfile.getInstance().getActiveLog().logId;
         logEntry.estStartDate = new Date();
@@ -72,7 +62,9 @@ public class CreationEntryActivity extends AppCompatActivity implements OnFragme
         logEntry.painLocation = "HEAD_TEMPLE";
         logEntry.painExperience = "Debilitating";
         logEntry.painType = "Sharp";
-        new InsertEntriesTask(this).execute(logEntry);
+        Intent intent = new Intent();
+        intent.putExtra("LOGENTRY", logEntry);
+        setResult(Activity.RESULT_OK, intent);
         finish();
     }
 }

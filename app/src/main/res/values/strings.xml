@@ -33,10 +33,10 @@
 
     <string name="menu_profile">Profile</string>
     <string name="menu_summery">Summery</string>
-    <string name="menu_log">Log</string>
+    <string name="menu_entries">Entries</string>
     <string name="menu_avatar">Avatar</string>
 
-    <string name="label_profile_name">Profile Name</string>
+    <string name="label_profile_name">Log Name</string>
     <string name="label_security_pin">Pin (4 Digits Max)</string>
     <string name="label_security_password">Password (Max 24 Characters)</string>
 
