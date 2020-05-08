@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/content_controls"
+              android:visibility="gone"
+              android:background="#8F8F8F"
+              android:orientation="horizontal" >
+    <ImageButton android:layout_width="match_parent" android:id="@+id/control_upload_btn" android:layout_height="wrap_content" android:layout_weight="1" android:src="@drawable/ic_backup_black_24dp" style="@style/MainTheme.GoodButton"/>
+    <ImageButton android:layout_width="match_parent" android:id="@+id/control_backup_btn" android:layout_height="wrap_content" android:layout_weight="1" android:src="@drawable/ic_file_download_black_24dp" style="@style/MainTheme.GoodButton"/>
+    <ImageButton android:layout_width="match_parent" android:id="@+id/control_sync_btn" android:layout_height="wrap_content" android:layout_weight="1" android:src="@drawable/ic_sync_black_24dp" style="@style/MainTheme.GoodButton"/>
+    <ImageButton android:layout_width="match_parent" android:id="@+id/control_delete_btn" android:layout_height="wrap_content" android:layout_weight="1" android:src="@drawable/ic_delete_black_24dp" style="@style/MainTheme.BadButton"/>
+</LinearLayout>

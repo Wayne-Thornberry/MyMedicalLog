@@ -5,8 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/PLAY_PARENT"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context="com.medco.mymedicallog.CreationVoiceActivity">
+        android:layout_height="match_parent">
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"

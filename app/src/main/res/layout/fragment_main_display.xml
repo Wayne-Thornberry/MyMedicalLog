@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        sothree:umanoDragView="@id/info_box"
+        sothree:umanoScrollableView="@id/avatar_view"
+        sothree:umanoOverlay="false"
+        sothree:umanoPanelHeight="46dp"
+        sothree:umanoShadowHeight="0dp"
+        android:gravity="bottom">
+    <com.medco.mymedicallog.ui.views.AvatarView
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:id="@+id/avatar_view"
+            custom:enable_selectable="true"
+            custom:enable_multi_selectable="false"
+            android:layout_height="match_parent"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/info_box"
+            android:clickable="true"
+            android:focusable="false"
+            android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:orientation="vertical" android:layout_height="wrap_content">
+            <ImageView android:layout_width="match_parent" android:layout_height="48dp" android:src="@drawable/ic_keyboard_arrow_up_black_24dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:orientation="vertical" android:id="@+id/entries_container" android:layout_height="wrap_content">
+
+        </LinearLayout>
+    </LinearLayout>
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

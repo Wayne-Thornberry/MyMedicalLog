@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:id="@+id/content_user"
+              android:visibility="gone"
+              android:layout_height="match_parent">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Personal Details" style="@style/MainTheme.HeadingOne"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="First Name" style="@style/MainTheme.TextMain"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Last Name" style="@style/MainTheme.TextMain"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Phone No" style="@style/MainTheme.TextMain"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Email" style="@style/MainTheme.TextMain"/>
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/MainTheme.BadButton" android:text="DELETE ALL" android:onClick="nuke"/>
+</LinearLayout>

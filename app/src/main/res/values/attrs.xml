@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AvatarView">
+        <attr name="enable_selectable" format="boolean" />
+        <attr name="enable_multi_selectable" format="boolean"/>
+    </declare-styleable>
+</resources>

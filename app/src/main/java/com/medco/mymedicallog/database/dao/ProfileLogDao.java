@@ -12,8 +12,22 @@ public interface ProfileLogDao {
     void insert(ProfileLog profileLog);
 
     @Delete
+    void delete(ProfileLog... profileLog);
+
+    @Delete
     void delete(ProfileLog profileLog);
 
+    @Transaction
     @Query("SELECT * FROM ProfileLog")
-    List<ProfileLog> getLogs();
+    List<ProfileLog> select();
+
+    @Transaction
+    @Query("SELECT * FROM ProfileLog WHERE log_name LIKE :logName")
+    ProfileLog select(String logName);
+
+    @Update(onConflict = OnConflictStrategy.IGNORE)
+    void update(List<ProfileLog> logs);
+
+    @Update(onConflict = OnConflictStrategy.IGNORE)
+    void update(ProfileLog log);
 }

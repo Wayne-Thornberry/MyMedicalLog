@@ -4,25 +4,29 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
-              android:gravity="center_vertical"
-              tools:context=".CreationDoctorActivity">
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Doctor Information" android:gravity="center" android:textSize="24dp"/>
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
-            tools:context=".ui.creation.log.general.LogGeneralFragment"
-            android:padding="23dp">
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-                  android:id="@+id/text_firstname" android:text="Doctor Code"/>
-        <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="phone"
-                  android:id="@+id/input_firstname" android:hint=""/>
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-                  android:id="@+id/text_lastname" android:text="Passcode"/>
-        <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="phone"
-                  android:id="@+id/input_lastname" android:hint=""/>
-        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Scan QR Code"/>
+              android:padding="@dimen/text_margin"
+              tools:context=".ui.creation.CreateActivity">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:textAlignment="center" style="@style/MainTheme.TextView" android:text="@string/doctor_ppsno_info"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/text_ppsno" android:text="PPSNo" style="@style/MainTheme.HeadingThree"/>
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/input_ppsno"
+                  android:inputType="text"
+                  android:maxLines="1" android:maxLength="8" android:hint="1234567O"/>
+        <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tick_doctor" android:text="@string/text_doctor_ppsno_notice"/>
     </LinearLayout>
-    <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Submit" android:onClick="submitDetails"/>
+
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/text_doctor_code" android:text="Doctor Code" style="@style/MainTheme.HeadingThree"/>
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/input_doctor_code"
+                  android:inputType="text"
+                  android:maxLines="1" android:maxLength="8" android:hint="" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/text_doctor_pass" android:text="Passcode" style="@style/MainTheme.HeadingThree"/>
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/input_doctor_pass"
+                  android:inputType="text"
+                  android:maxLines="1"
+                  android:maxLength="8" android:hint="" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/text_passcode_hint" android:text="@string/text_doctor_passcode_notice" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:textAlignment="center" android:id="@+id/das" android:text="OR" />
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/text_doctor_btn_code" style="@style/MainTheme.GoodButton"/>
+    </LinearLayout>
 </LinearLayout>

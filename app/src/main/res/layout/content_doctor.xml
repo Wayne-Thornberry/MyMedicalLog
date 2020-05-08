@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:id="@+id/content_doctor"
+              android:visibility="gone"
+              android:layout_height="wrap_content">
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/MainTheme.HeadingOne" android:id="@+id/doctor_title" android:text="Doctor Details"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/MainTheme.TextView" android:id="@+id/doctor_status" android:text="DOCTOR STATUS"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/MainTheme.TextView" android:id="@+id/doctor_location" android:text="DOCTOR LOCATION"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/MainTheme.TextView" android:id="@+id/doctor_last_online" android:text="DOCTOR LAST ONLINE"/>
+
+</LinearLayout>

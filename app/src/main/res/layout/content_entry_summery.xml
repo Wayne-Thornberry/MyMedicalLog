@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/MainTheme.HeadingOne" android:text="@string/item_label_entry_summery"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/MainTheme.TextView" android:text="Entry Creation Date: "/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/MainTheme.TextView" android:text="Last Logged Entry: "/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/MainTheme.TextView" android:text="Location: "/>
+</LinearLayout>

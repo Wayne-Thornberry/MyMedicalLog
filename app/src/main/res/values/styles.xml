@@ -1,29 +1,140 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimary</item>
-        <item name="colorAccent">@color/colorPrimary</item>
+    <style name="MainTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_theme_primary</item>
+        <item name="colorPrimaryDark">@color/color_theme_secondary</item>
+        <item name="colorAccent">@color/color_theme_accent</item>
+        <item name="android:toolbarStyle">@style/MainTheme.ActionBar</item>
+        <item name="android:actionBarStyle">@style/MainTheme.ActionBar</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimary</item>
-        <item name="colorAccent">@color/colorPrimary</item>
-        <item name="android:windowBackground">@color/colorPrimary</item>
+    <style name="MainTheme.ActionBar" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:background">@color/color_theme_primary</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
-    <style name="NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="MainTheme.Button">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:padding">@dimen/button_padding</item>
+    </style>
+
+    <style name="MainTheme.PrimaryButton" parent="MainTheme.Button">
+        <item name="android:background">@color/color_button_primary</item>
+    </style>
+
+    <style name="MainTheme.SecondaryButton" parent="MainTheme.Button">
+        <item name="android:background">@color/color_button_primary</item>
+    </style>
+
+    <style name="MainTheme.BadButton" parent="MainTheme.Button">
+        <item name="android:background">@color/color_status_alert</item>
+        <item name="android:textColor">@color/color_button_primary</item>
+        <item name="android:textSize">@dimen/h3_size</item>
+    </style>
+
+     <style name="MainTheme.GoodButton" parent="MainTheme.Button">
+        <item name="android:background">@color/color_theme_primary</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textSize">@dimen/h3_size</item>
+    </style>
+
+
+    <style name="MainTheme.NewButton">
+        <item name="android:background">@color/color_button_unselected</item>
+        <item name="android:layout_margin">@dimen/text_margin</item>
+        <item name="android:textSize">@dimen/h3_size</item>
+    </style>
+
+
+    <style name="MainTheme.TextView">
+        <item name="android:padding">@dimen/text_margin</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/color_black</item>
+    </style>
+
+    <style name="MainTheme.BaseHeading" parent="MainTheme.TextView">
+        <item name="android:background">@color/color_theme_secondary</item>
+        <item name="android:padding">@dimen/text_margin</item>
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="MainTheme.HeadingOne" parent="MainTheme.BaseHeading">
+        <item name="android:textSize">@dimen/h1_size</item>
+    </style>
+
+    <style name="MainTheme.HeadingTwo" parent="MainTheme.BaseHeading">
+        <item name="android:textSize">@dimen/h2_size</item>
+    </style>
+
+    <style name="MainTheme.HeadingThree" parent="MainTheme.BaseHeading">
+        <item name="android:background">@color/color_theme_light</item>
+        <item name="android:textSize">@dimen/h3_size</item>
+    </style>
+
+    <style name="MainTheme.TextMain">
+        <item name="android:padding">@dimen/text_margin</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:textColor">@color/color_black</item>
+    </style>
+
+    <style name="MainTheme.FabAdd">
+        <item name="android:layout_gravity">right|bottom</item>
+        <item name="android:layout_margin">@dimen/fab_margin</item>
+        <item name="android:background">@color/color_theme_secondary</item>
+        <item name="android:tint">@color/color_theme_secondary</item>
+        <item name="android:src">@android:drawable/ic_input_add</item>
+    </style>
+
+    <style name="MainTheme.ProfileLog">
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:textColor">@color/color_black</item>
+    </style>
+
+    <style name="MainTheme.ProfileLog.TextView">
+        <item name="android:textAlignment">center</item>
+        <item name="android:padding">@dimen/text_margin</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:textColor">@color/color_black</item>
+    </style>
+
+    <style name="MainTheme.LogEntry">
+        <item name="android:background">@color/color_white</item>
+    </style>
+
+    <style name="MainTheme.LogEntry.TextView">
+        <item name="android:padding">@dimen/text_margin</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:textColor">@color/color_black</item>
+    </style>
+
+    <style name="MainTheme.AvatarLayout">
+        <item name="android:background">@color/color_status_alert</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:tint">#f00</item>
+        <item name="android:alpha">1</item>
+    </style>
+
+    <style name="MainTheme.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textAlignment">center</item>
+        <item name="android:background">@color/color_button_primary</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:layout_margin">@dimen/text_margin</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:maxLength">15</item>
+    </style>
+
+    <style name="MainTheme.EditText.Multiline" parent="MainTheme.EditText">
+        <item name="android:maxLines">15</item>
+        <item name="android:maxLength">300</item>
+    </style>
+    <style name="MainTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
-    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="MainTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="MainTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
 </resources>

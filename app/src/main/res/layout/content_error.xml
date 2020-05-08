@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_width="match_parent"
+              android:id="@+id/content_error"
+              android:visibility="visible"
+              android:layout_height="wrap_content">
+    <ImageView android:layout_width="match_parent" android:layout_height="150dp" android:layout_gravity="center" android:id="@+id/notice_image" android:src="@drawable/ic_sentiment_dissatisfied_black_24dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:textAlignment="center"
+              android:id="@+id/notice_heading"
+              style="@style/MainTheme.HeadingOne"
+              android:text="@string/text_notice_error_heading"/>
+    <TextView android:layout_width="match_parent"
+              android:layout_margin="@dimen/text_margin"
+              android:padding="@dimen/text_margin"
+              android:layout_height="wrap_content"
+              android:id="@+id/notice_text"
+              style="@style/MainTheme.TextView"
+              android:textAlignment="center"
+              android:text="@string/text_notice_error_text"/>
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/MainTheme.GoodButton"
+            android:id="@+id/notice_btn"
+            android:layout_gravity="center"
+            android:text="@string/text_notice_error_btn"/>
+</LinearLayout>

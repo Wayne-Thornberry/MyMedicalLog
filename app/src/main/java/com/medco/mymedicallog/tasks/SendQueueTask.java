@@ -15,24 +15,27 @@ import java.util.Map;
 public class SendQueueTask extends AsyncTask<String,Void,Void> {
 
     private final String mMessageType;
-    private final int mDoctorId;
+    private final String mQueue;
+    private final String mUUID;
 
-    public SendQueueTask(String type, int id) {
+    public SendQueueTask(String uuid, String type, String queue) {
+        mUUID = uuid;
         mMessageType = type;
-        mDoctorId = id;
+        mQueue = queue;
     }
 
     @Override
     protected Void doInBackground(String... strings) {
-        ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("64.43.3.207");
+       ConnectionFactory factory = new ConnectionFactory();
+        factory.setHost("109.78.62.161");
         factory.setCredentialsProvider(new DefaultCredentialsProvider("test","test"));
-        String queue = "DOCTOR-ID:" + mDoctorId + "-QUEUE";
+        String queue = mQueue;
         try   {
             Connection connection = factory.newConnection();
             Channel channel = connection.createChannel();
             channel.queueDeclare(queue, false, false, false, null);
             ArrayMap<String, Object> t = new ArrayMap<String,Object>();
+            t.put("UUID", mUUID);
             t.put("TYPE", mMessageType);
             AMQP.BasicProperties properties = new AMQP.BasicProperties.Builder().headers(t).build();
             channel.basicPublish("", queue,properties , strings[0].getBytes());

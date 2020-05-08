@@ -1,23 +1,24 @@
 package com.medco.mymedicallog.services;
 
-import android.app.Activity;
 import android.app.IntentService;
+import android.app.Service;
 import android.content.Intent;
-import android.content.Context;
+import android.os.IBinder;
 import android.util.Log;
-import android.widget.Toast;
+import androidx.annotation.Nullable;
 import com.google.gson.Gson;
-import com.medco.mymedicallog.MyProfile;
-import com.medco.mymedicallog.data.UserProfile;
-import com.medco.mymedicallog.data.messages.EntryViewedMessage;
-import com.medco.mymedicallog.database.entities.LogEntry;
-import com.medco.mymedicallog.interfaces.OnMessageReceivedListener;
-import com.medco.mymedicallog.tasks.UpdateEntryTask;
+import com.medco.mymedicallog.data.GeneralData;
+import com.medco.mymedicallog.data.messages.ConnectionRequestMessage;
+import com.medco.mymedicallog.data.messages.DoctorDetailsMessage;
+import com.medco.mymedicallog.data.messages.PatientDetailsMessage;
+import com.medco.mymedicallog.tasks.ReadFromFileTask;
+import com.medco.mymedicallog.tasks.WriteToFileTask;
 import com.rabbitmq.client.*;
 import com.rabbitmq.client.impl.DefaultCredentialsProvider;
 
-import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.UUID;
+import java.util.concurrent.ExecutionException;
 
 /**
  * An {@link IntentService} subclass for handling asynchronous task requests in
@@ -26,66 +27,50 @@ import java.nio.charset.StandardCharsets;
  * TODO: Customize class - update intent actions, extra parameters and static
  * helper methods.
  */
-public class RabbitMQService extends IntentService implements DeliverCallback {
+public class RabbitMQService extends Service {
 
-    private static Context mTest;
-    private ConnectionFactory mFactory;
-    private Connection mConnection;
-    private Channel mChannel;
+    private Thread mThread;
+    private GeneralData mProfile;
 
     public RabbitMQService() {
-        super("RabbitMQService");
+        super();
     }
 
-    // interface to start the service
-    public static void startRabbitMQReciving(Context context, UserProfile profile, int id) {
-        Intent intent = new Intent(context, RabbitMQService.class);
-        intent.putExtra("USER_ID", id);
-        intent.putExtra("USER_PROFILE", profile);
-        mTest = context;
-        context.startService(intent);
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (mThread != null)
+            mThread.interrupt();
+        mThread = null;
+    }
+
+    @Nullable
+    @Override
+    public IBinder onBind(Intent intent) {
+        return null;
     }
 
     @Override
-    protected void onHandleIntent(Intent intent) {
-        int id = intent.getIntExtra("USER_ID", -1);
-        UserProfile profile = (UserProfile) intent.getSerializableExtra("USER_PROFILE");
-        if(id == -1) return;
-        mFactory = new ConnectionFactory();
-        mFactory.setHost("64.43.3.207");
-        mFactory.setCredentialsProvider(new DefaultCredentialsProvider("test","test"));
-        String queue = "USER-ID:" + id + "-QUEUE";
-        try {
-            mConnection = mFactory.newConnection();
-            mChannel = mConnection.createChannel();
-            mChannel.queueDeclare(queue, false, false, true, null);
-            DeliverCallback deliverCallback = this;
-            mChannel.basicConsume(queue, false,  deliverCallback, consumerTag -> {});
-        }catch(Exception e){
-            e.printStackTrace();
-        }
+    public void onCreate() {
+        super.onCreate();
+
     }
 
-    @Override
-    public void handle(String consumerTag, Delivery delivery) throws IOException {
-        String message = new String(delivery.getBody(), StandardCharsets.UTF_8);
-        Log.e("RECIVED", message);
-        Gson gson = new Gson();
-        try{
-            if(delivery.getProperties().getType().equals("DOCTOR_VIEWED_ENTRY")){
-                EntryViewedMessage entryViewedMessage = gson.fromJson(message, EntryViewedMessage.class);
-                for (LogEntry entry : MyProfile.getInstance().getEntries()){
-                    boolean t= entry.entryId == entryViewedMessage.EntryId;
-                    Log.e("ENTRY", entry.entryId + " " + t + " " + entryViewedMessage.EntryId);
-                    if(entry.entryId == entryViewedMessage.EntryId){
-                        entry.viewed = true;
-                        new UpdateEntryTask(mTest, 3).execute(entry);
-                        break;
-                    }
-                }
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+    private void SaveProfile() {
+        new WriteToFileTask(this, "ProfileData").execute(mProfile);
     }
 }
+
+
+//EntryViewedMessage entryViewedMessage = gson.fromJson(message, EntryViewedMessage.class);
+//List<LogEntry> entries = (List<LogEntry>) new DatabaseTask(this, MainDatabase.SELECT_LOG_CODE).execute().get();
+//for (LogEntry entry : entries){
+//    boolean t= entry.entryId == entryViewedMessage.EntryId;
+//    Log.e("ENTRY", entry.entryId + " " + t + " " + entryViewedMessage.EntryId);
+//    if(entry.entryId == entryViewedMessage.EntryId){
+//        entry.doctorViewed = true;
+//        break;
+//    }
+//}
+//new DatabaseTask(this, MainDatabase.UPDATE_LOG_CODE).execute(entries).get();

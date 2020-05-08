@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/MainTheme.HeadingTwo" android:text="Questions"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/MainTheme.HeadingThree" android:text="Can you pinpoint the pain?"/>
+                <com.medco.mymedicallog.ui.views.AvatarView
+                        xmlns:custom="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:id="@+id/avatar_view"
+                        custom:enable_selectable="true"
+                        custom:enable_multi_selectable="true"
+                        android:layout_height="300dp"/>
+            </LinearLayout>
+            <LinearLayout  android:layout_height="wrap_content" android:layout_width="match_parent"  android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/MainTheme.HeadingThree" android:text="Which one of these, bests describes the pain?"/>
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/entry_list"
+                        android:name="com.medco.mymedicallog.ui.creation.OptionFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layoutManager="LinearLayoutManager"
+                        tools:context=".ui.creation.entry.EntryPainTypeFragment"
+                        tools:listitem="@layout/view_selector_item"/>
+            </LinearLayout>
+            <LinearLayout  android:layout_height="wrap_content" android:layout_width="match_parent"  android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="How noticeable is the pain?" style="@style/MainTheme.HeadingThree"/>
+                <Button android:layout_width="match_parent" android:id="@+id/notability_0" android:layout_height="wrap_content" style="@style/MainTheme.NewButton" android:textAlignment="center" android:text="Not at all"/>
+                <Button android:layout_width="match_parent" android:id="@+id/notability_1" android:layout_height="wrap_content"  style="@style/MainTheme.NewButton" android:textAlignment="center" android:text="A bit"/>
+                <Button android:layout_width="match_parent" android:id="@+id/notability_2" android:layout_height="wrap_content" style="@style/MainTheme.NewButton" android:textAlignment="center" android:text="It's there"/>
+                <Button android:layout_width="match_parent" android:id="@+id/notability_3" android:layout_height="wrap_content" style="@style/MainTheme.NewButton" android:textAlignment="center" android:text="Very noticeable"/>
+                <Button android:layout_width="match_parent" android:id="@+id/notability_4" android:layout_height="wrap_content" style="@style/MainTheme.NewButton" android:textAlignment="center" android:text="Always there"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/MainTheme.HeadingThree" android:text="When did the pain start?"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:id="@+id/in_date" android:hint="00/00/0000"/>
+
+                    <Button
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            style="@style/MainTheme.NewButton"
+                            android:text="SELECT DATE"
+                            android:id="@+id/btn_date" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:id="@+id/in_time" android:hint="00:00pm"/>
+
+                    <Button
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            style="@style/MainTheme.NewButton"
+                            android:text="SELECT TIME"
+                            android:id="@+id/btn_time"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout  android:layout_height="wrap_content" android:layout_width="match_parent"  android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="How severe would you describe the pain is?" style="@style/MainTheme.HeadingThree"/>
+                <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/severity_mild" style="@style/MainTheme.NewButton" android:textAlignment="center" android:text="Mild"/>
+                <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/severity_moderate" style="@style/MainTheme.NewButton" android:textAlignment="center" android:text="Moderate"/>
+                <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/severity_severe" style="@style/MainTheme.NewButton" android:textAlignment="center" android:text="Severe" />
+            </LinearLayout>
+            <LinearLayout  android:layout_height="wrap_content" android:layout_width="match_parent"  android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="How strong is the pain?" style="@style/MainTheme.HeadingThree"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_weight="0.2" android:textAlignment="center" style="@style/MainTheme.TextView" android:layout_height="wrap_content" android:text="0"/>
+                    <SeekBar android:max="10" android:min="0" android:layout_width="0dp" android:layout_weight="1" android:id="@+id/pain_strength" android:textAlignment="center" android:layout_height="match_parent"/>
+                    <TextView android:layout_width="0dp" android:layout_weight="0.2" android:textAlignment="center" style="@style/MainTheme.TextView" android:layout_height="wrap_content" android:text="10"/>
+                </LinearLayout>
+                <TextView android:layout_width="match_parent" android:textAlignment="center" style="@style/MainTheme.TextView"  android:id="@+id/pain_strength_text" android:layout_height="wrap_content" android:text="0"/>
+            </LinearLayout>
+            <LinearLayout  android:layout_height="wrap_content" android:layout_width="match_parent"  android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Would you like to add any additional comments?" style="@style/MainTheme.HeadingThree"/>
+                <EditText android:layout_width="match_parent" android:layout_height="150dp" android:hint="My comment" android:id="@+id/pain_additional" android:maxLines="5" android:maxLength="350"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Characters Left: 350"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

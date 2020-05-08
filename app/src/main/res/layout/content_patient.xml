@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:id="@+id/content_patient"
+              android:visibility="gone"
+              android:layout_height="wrap_content">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/patient_title" android:text="@string/text_patient_details" style="@style/MainTheme.HeadingOne"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/patient_age" android:text="@string/text_patient_age" style="@style/MainTheme.TextView"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/patient_phone_no" android:text="@string/text_phone_no" style="@style/MainTheme.TextView"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/patient_addresss" android:text="@string/text_address" style="@style/MainTheme.TextView"/>
+</LinearLayout>

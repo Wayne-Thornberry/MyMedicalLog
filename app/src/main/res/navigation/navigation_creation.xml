@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation_creation_entry"
+            app:startDestination="@id/nav_c_home">
+
+    <fragment
+            android:id="@+id/nav_c_home"
+            android:name="com.medco.mymedicallog.ui.creation.CreationHomeFragment"
+            android:label="@string/item_label_home"
+            tools:layout="@layout/fragment_creation_home"/>
+    <fragment
+            android:id="@+id/nav_c_log_general"
+            android:name="com.medco.mymedicallog.ui.creation.CreationLogFragment"
+            android:label="@string/item_label_logs"
+            tools:layout="@layout/fragment_creation_log_general"/>
+
+    <fragment
+            android:id="@+id/nav_c_profile_general"
+            android:name="com.medco.mymedicallog.ui.creation.CreationAccountFragment"
+            android:label="@string/item_label_logs"
+            tools:layout="@layout/fragment_creation_profile_general"/>
+    <fragment
+            android:id="@+id/nav_c_doctor_details"
+            android:name="com.medco.mymedicallog.ui.creation.CreationDoctorFragment"
+            android:label="@string/item_label_logs"
+            tools:layout="@layout/fragment_creation_doctor"/>
+
+    <fragment
+            android:id="@+id/nav_c_entry_touch_input"
+            android:name="com.medco.mymedicallog.ui.creation.entry.EntryTouchInputFragment"
+            android:label="@string/item_label_entry"
+            tools:layout="@layout/fragment_creation_entry_touch_input"/>
+
+    <fragment
+            android:id="@+id/nav_c_entry_review"
+            android:name="com.medco.mymedicallog.ui.creation.entry.EntryReviewFragment"
+            android:label="@string/item_label_entry"
+            tools:layout="@layout/fragment_creation_entry_review"/>
+
+</navigation>

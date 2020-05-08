@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".ui.creation.CreateActivity"
+            android:padding="@dimen/text_margin">
+    <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@color/color_theme_secondary"/>
+    <LinearLayout android:layout_height="wrap_content"
+                  android:layout_width="match_parent"
+                  android:layout_marginBottom="@dimen/text_margin"
+                  android:layout_marginTop="@dimen/text_margin"
+                  android:orientation="vertical">
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/text_firstname"
+                  android:text="@string/text_username"
+                  style="@style/MainTheme.HeadingThree"/>
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/input_username"
+                  android:hint=""/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_height="wrap_content"
+                  android:layout_width="match_parent"
+                  android:layout_marginBottom="@dimen/text_margin"
+                  android:layout_marginTop="@dimen/text_margin"
+                  android:orientation="vertical">
+        <TextView  android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/text_lastname"
+                   android:text="@string/text_password"
+                   style="@style/MainTheme.HeadingThree"/>
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/input_password"
+                  android:inputType="textPassword"
+                  android:hint=""/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_height="wrap_content"
+                  android:layout_width="match_parent"
+                  android:layout_marginBottom="@dimen/text_margin"
+                  android:layout_marginTop="@dimen/text_margin"
+                  android:orientation="vertical">
+        <TextView   android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:id="@+id/text_emailaddress"
+                   android:text="@string/text_email"
+                   style="@style/MainTheme.HeadingThree"/>
+        <EditText   android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:id="@+id/input_emailaddress"
+                   android:hint=""/>
+    </LinearLayout>
+</LinearLayout>
+

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8397a4c1-72ad-47a4-bc18-da5b22ade7f8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../ic_launcher-web.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/MainApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ViewActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/data/CustomDataEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/data/GeneralData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/data/LoginDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/data/LoginRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/data/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/data/ServiceData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/data/messages/ConnectionRequestMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/data/messages/DoctorDetailsMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/data/messages/DoctorStatusMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/data/messages/DoctorSyncMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/data/messages/LogEntryMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/data/messages/PatientDetailsMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/data/messages/ProfileLogAndEntriesMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/data/messages/ProfileLogMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/data/model/LoggedInUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/entities/AccountCreation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/entities/AccountDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/entities/DoctorCreation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/entities/DoctorDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/entities/PatientDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/entities/SelectorItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/tasks/DatabaseTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/tasks/ReadFromFileTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/tasks/WriteToFileTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/adapters/LogEntriesAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/adapters/ProfileLogsAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/adapters/SectionsPagerAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/adapters/SelectorAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/adapters/ServicesAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/adapters/holders/SelectorHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/creation/CreateActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/creation/CreationAccountFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/creation/CreationDoctorFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/creation/CreationHomeFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/creation/CreationLogFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/creation/entry/EntryTouchInputFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/fragments/DoctorFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/fragments/EntriesFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/fragments/EntryFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/fragments/LogFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/fragments/PainFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/fragments/PatientFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/interfaces/OnAvatarInteractionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/interfaces/OnChangeEntriesInteraction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/interfaces/OnCreationInteractionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/interfaces/OnDoctorInteractionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/interfaces/OnEntriesInteractionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/interfaces/OnEntryInteractionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/interfaces/OnHomeInteractionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/interfaces/OnLogInteractionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/interfaces/OnLogsInteractionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/interfaces/OnPatientInteractionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/interfaces/OnSelectorInteraction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/interfaces/OnTaskFinishedListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/login/LoggedInUserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/login/LoginActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/login/LoginFormState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/login/LoginResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/login/LoginViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/login/LoginViewModelFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/main/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/main/MainDisplayFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/main/MainDoctorFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/main/MainHomeFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/main/MainLogsFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/main/MainServicesFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/views/AvatarView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/bottom_navigation_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_backup_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_check_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_chevron_right.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_delete_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_file_download_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_group.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_head_back.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_head_back_outline.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_head_front.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_head_front_outline.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_head_side.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_head_side_outline.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_keyboard_arrow_down_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_keyboard_arrow_up_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_person.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_send_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_sentiment_dissatisfied_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_star_border_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_sync_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_test.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_view_module.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/tab_indicator_default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/tab_indicator_selected.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/activity_creation.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/activity_login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_doctor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_entry.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_entry_summery.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_error.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_log.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_pain.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_patient.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_profile_summery.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content_user.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fragment_creation_entry_touch_input.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fragment_creation_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fragment_doctor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fragment_entries.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fragment_entry.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fragment_log.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fragment_main_display.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fragment_main_doctor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fragment_main_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fragment_main_logs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fragment_main_services.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fragment_pain.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fragment_patient.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view_selector_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view_service_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../menu/menu_general.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../navigation/navigation_creation.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../navigation/navigation_general.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../values-v23/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../values-w820dp/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../values/attrs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../values/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml/automotive_app_desc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/CreationDoctorActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/CreationEntryActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/CreationLogActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/CreationProfileActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/EntryViewActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/MyProfile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/adapters/LogEntryListRecyclerViewAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/adapters/ProfileLogListRecyclerViewAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/adapters/holders/LogEntryHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/adapters/holders/LogEntryHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/adapters/holders/ProfileLogHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/adapters/holders/ProfileLogHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/data/DoctorProfile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/data/UserProfile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/data/messages/DoctorRequestMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/data/messages/EntryViewedMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/database/MainDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/database/MainDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/database/dao/LogEntryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/database/dao/LogEntryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/database/dao/ProfileLogDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/database/dao/ProfileLogDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/database/entities/LogEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/database/entities/LogEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/database/entities/ProfileLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/database/entities/ProfileLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/database/relationships/LogWithEntries.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/interfaces/OnFragmentInteractionListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/interfaces/OnLogEntryListFragmentInteractionListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/interfaces/OnMessageReceivedListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/interfaces/messages/OnMessageReceivedListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/interfaces/OnProfileLogListFragmentInteractionListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/interfaces/OnTaskCompleteListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/services/RabbitMQService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/services/RabbitMQService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/tasks/GetLogEntriesTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/tasks/GetLogsTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/tasks/InsertEntriesTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/tasks/InsertLogTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/tasks/SendQueueTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/tasks/SendQueueTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/tasks/UpdateEntryTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/creation/doctor/DoctorConnectionFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/creation/entry/EntryGeneralFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/creation/entry/EntryLocationFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/creation/entry/EntryMedicationFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/creation/entry/EntryPainFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/creation/entry/EntryReviewFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/creation/entry/EntryReviewFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/creation/log/LogGeneralFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/creation/profile/ProfileCreationFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/creation/voice/VoiceInputFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/creation/entry/EntryVoiceInputFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/main/avatar/MainAvatarFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/main/entries/MainEntriesFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/main/logs/LogSelectionFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/main/option/OptionFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/main/profile/MainProfileFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/medco/mymedicallog/ui/main/summery/MainSummeryFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/front_head.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/ic_add_black_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../drawable/ic_add.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/ic_assignment_black_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../drawable/ic_assignment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/ic_menu_camera.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/ic_menu_gallery.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/ic_menu_manage.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/ic_menu_send.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../drawable/ic_chevron_left.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/ic_menu_share.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/ic_menu_slideshow.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/man.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/nav_menu_header_bg.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drawable/side_head.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity_creation_doctor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity_creation_entry.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity_creation_log.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity_creation_profile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity_entry_view.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content_nav_header.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment_creation_doctor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fragment_creation_doctor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment_creation_entry_general.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment_creation_entry_location.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment_creation_entry_medication.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment_creation_entry_pain.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment_creation_entry_review.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fragment_creation_entry_review.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment_creation_log_general.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fragment_creation_log_general.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment_creation_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fragment_creation_profile_general.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment_creation_security.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fragment_creation_security.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment_drawer_logs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment_gathering_recording.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fragment_gathering_recording.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment_main_avatar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment_main_log.xml" beforeDir="false" afterPath="$PROJECT_DIR$/activity_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment_main_options.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../drawable/tab_selector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment_main_profile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragment_main_summery.xml" beforeDir="false" afterPath="$PROJECT_DIR$/content_controls.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_log_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/view_log_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_profile_entry_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/view_entry_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_profile_entry_list.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../menu/menu_entry_navigation.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../menu/menu_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-hdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-mdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../navigation/entry_navigation.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../navigation/main_navigation.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values-v21/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../build.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectId" id="1bUcjRKlQRIikB8j4gaZkN0XVhT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8397a4c1-72ad-47a4-bc18-da5b22ade7f8" name="Default Changelist" comment="" />
+      <created>1588690247306</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588690247306</updated>
+      <workItem from="1588690249465" duration="19000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

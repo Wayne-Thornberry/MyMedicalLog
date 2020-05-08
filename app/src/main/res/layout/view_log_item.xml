@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="64dp"
-             android:background="@drawable/ic_assignment_black_24dp"
-/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              style="@style/MainTheme.ProfileLog"
+              android:background="@color/color_button_selected"
+              android:id="@+id/log"
+              android:layout_margin="@dimen/text_margin"
+              android:orientation="vertical">
+    <TextView
+            android:id="@+id/log_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NAME"
+            android:maxLines="1"
+            android:maxLength="50"
+            android:ellipsize="end"
+            style="@style/MainTheme.HeadingTwo"
+            android:textAlignment="center"
+            android:textAppearance="?attr/textAppearanceListItem"/>
+    <TextView
+            android:id="@+id/log_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ID"
+            style="@style/MainTheme.TextView"
+            android:textAlignment="center"
+            android:textAppearance="?attr/textAppearanceListItem"/>
+    <TextView
+            android:id="@+id/log_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/MainTheme.TextView"
+            android:textAlignment="center"
+            android:text="UPDATED"
+            android:textAppearance="?attr/textAppearanceListItem"/>
+</LinearLayout>
